@@ -4,63 +4,63 @@
     "title": "Macbook Air",
     "category": "Computer",
     "description": "High-quality wireless headphones with noise-canceling technology and up to 20 hours of battery life.",
-    "price": "8.999 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "8.999",
+    "image": "assets/img/macbookair.jpg"
   },
   {
     "id": 1,
     "title": "Macbook Pro",
     "category": "Computer",
     "description": "Water-resistant smart watch with health tracking, GPS, and customizable watch faces.",
-    "price": "14.999 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "14.999",
+    "image": "assets/img/macbookpro.jpg"
   },
   {
     "id": 2,
-    "title": "Ihone 15 Pro",
+    "title": "iPhone 15",
     "category": "Phone",
     "description": "Portable Bluetooth speaker with deep bass, 360-degree sound, and 10-hour playtime.",
-    "price": "9.799 kr. ",
-    "image": "https://picsum.photos/300/300?"
+    "price": "9.799",
+    "image": "assets/img/iphone15.jpg"
   },
   {
     "id": 3,
-    "title": "iPhone 14 Pro",
+    "title": "iPhone 14",
     "category": "Phone",
     "description": "65-inch 4K Ultra HD Smart TV with HDR support and built-in streaming apps.",
-    "price": "7.999 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "7.999",
+    "image": "assets/img/iphone14.jpg"
   },
   {
     "id": 4,
     "title": "iPad Pro",
     "category": "iPad",
     "description": "Powerful gaming laptop with a 15.6-inch display, Intel i7 processor, and 16GB RAM.",
-    "price": "5.999 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "5.999",
+    "image": "assets/img/ipadpro.jpg"
   },
   {
     "id": 5,
     "title": "iPad Air",
     "category": "iPad",
     "description": "Latest generation smartphone with a 6.5-inch display, triple-camera system, and 128GB storage.",
-    "price": "5.499 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "5.499",
+    "image": "assets/img/ipadair.jpg"
   },
   {
     "id": 6,
     "title": "Apple Watch Series 9",
     "category": "Watch",
     "description": "Rechargeable electric toothbrush with smart sensor technology and multiple brushing modes.",
-    "price": "3.599 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "3.599",
+    "image": "assets/img/watch9.jpg"
   },
   {
     "id": 7,
     "title": "Apple Watch Ultra 2",
     "category": "Watch",
     "description": "Sleek fitness tracker with heart rate monitoring, sleep tracking, and step counter.",
-    "price": "7.199 kr.",
-    "image": "https://picsum.photos/300/300?"
+    "price": "7.199",
+    "image": "assets/img/watchultra.jpg"
   }
 ]

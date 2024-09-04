@@ -12,4 +12,93 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: rgb(229, 229, 229);
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 4px 12px #00000014;
+}
+
+.product div {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.title {
+  margin-left: 15px;
+  font-size: 2rem;
+  padding-top: 30px;
+}
+
+.product div p:first-child {
+  margin-left: 15px;
+  font-size: 1.5rem;
+}
+
+.buy {
+  margin-left: auto;
+  margin-right: 15px;
+  background-color: rgb(78, 78, 255);
+  border-radius: 15px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.buy a {
+  text-decoration: none;
+  color: white;
+}
+
+.favBtn {
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.favBtn:hover {
+  color: red;
+  transition: all 250ms ease-in-out;
+}
+
+@keyframes fav-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8); /* Shrink */
+  }
+  100% {
+    transform: scale(1.2); /* Grow larger than normal */
+  }
+}
+
+.BasketBtn {
+  margin-right: 15px;
+}
+
+.product img {
+  width: 250px;
+  height: 250px;
+  align-self: center;
+  overflow: hidden;
+}
+
+button {
+  background-color: white;
+  border: none;
 }

@@ -14,7 +14,8 @@ export function favorites() {
   function renderFavoriteList() {
     if (favoriteListContainer) {
       if (favorites.length != 0) {
-        favoriteListContainer.innerHTML = "";
+        favoriteListContainer.innerHTML = ""; // DENNE LINJE MANGLEDE <-------
+
         favorites.forEach((product) => {
           favoriteListContainer.insertAdjacentHTML(
             "beforeend",
@@ -64,6 +65,7 @@ export function favorites() {
     const indexOfFav = favorites.findIndex(
       (product) => product.id == productIdToRemove
     );
+    console.log(indexOfFav);
 
     favorites.splice(indexOfFav, 1);
 
@@ -71,7 +73,9 @@ export function favorites() {
 
     renderFavoriteList();
 
-    /* Hvis favorit-listen er tom, så slettes localStorage helt */
-    if (favorites.length == 0) localStorage.removeItem("favList");
+    // Hvis favorit-listen er tom, så slettes localStorage helt
+    if (favorites.length == 0) {
+      localStorage.removeItem("favList");
+    }
   }
 }
