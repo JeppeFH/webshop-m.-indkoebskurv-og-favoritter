@@ -6,7 +6,8 @@ export const productListTmpl = (product) =>
       <p><i>${product.price} kr</i></p>
       <img src="${product.image}${product.id}">
       <button><a href="page.html?id=${product.id}">Se produkt</a></button>
-      <button class="favBtn" id="${product.id}">Føj til favoriter</button>  
+      <button class="favBtn" id="${product.id}"><i class="fa-solid fa-heart"></i></button>
+  <button class="BasketBtn" id="${product.id}"><i class="fa-solid fa-basket-shopping"></i></button> 
       `;
 
 export const productPageTmpl = (product) =>
@@ -16,7 +17,8 @@ export const productPageTmpl = (product) =>
       <img src="${product.image}${product.id}">
       <p>${product.description}</p>
       <button><a href="index.html">Tilbage</a></button> 
-  
+      <button class="favBtn" id="${product.id}"><i class="fa-solid fa-heart"></i></button>
+      <button class="BasketBtn" id="${product.id}"><i class="fa-solid fa-basket-shopping"></i></button>
   <br>
   `;
 
@@ -26,5 +28,6 @@ export const favListTmpl = (product) =>
       <p><i>${product.price} kr</i></p>
       <img src="${product.image}${product.id}">
       <button><a href="page.html?id=${product.id}">Se produkt</a></button> 
-      <button class="removeBtn" id="${product.id}">Fjern fra favoritter</button> 
+      <button class="removeBtn" id="${product.id}"><i class="fa-solid fa-heart"></i></button>
+      <button class="BasketBtn" id="${product.id}"><i class="fa-solid fa-basket-shopping"></i></button> 
       `;
