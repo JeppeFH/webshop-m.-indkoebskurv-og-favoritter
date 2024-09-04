@@ -31,7 +31,7 @@ export const productPageTmpl = (product) =>
       <p>Batteritid: ${product.battery_life}</p>
       </div>
 
-      <div class="colorways">
+      
       <div class="colorways">
         <figure class="colorway gradient-1"></figure>
         <figure class="colorway gradient-2"></figure>
@@ -40,16 +40,12 @@ export const productPageTmpl = (product) =>
         <figure class="colorway gradient-5"></figure>
       </div>
 
-    <div class=amount>
-<figure class="plus">+</figure>
-<label class="amount-number"></figure>
-<figure class="minus">-</figure>
-</div>
+      <div class=quantity>
+        <figure class="plus">+</figure>
+        <label class="quantity-number">${product.amount}</label>
+        <figure class="minus">-</figure>
+      </div>
 
-</div>
-
-
-      
       <button class="addToBasket" >Tilføj til kurven</button>
       </div>
   `;

@@ -6,7 +6,7 @@
     "description": "« Oplev den nyeste generation af Macbook Air, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "8.999",
     "image": "assets/img/macbookair.png",
-
+    "amount": "1",
     "processor": "Apple M2 chip",
     "memory": "8 GB RAM",
     "storage": "256 GB SSD",
@@ -21,7 +21,7 @@
     "description": "« Oplev den nyeste generation af Macbook Pro, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "14.999",
     "image": "assets/img/macbookpro.png",
-
+    "amount": "1",
     "processor": "Apple M2 Pro chip",
     "memory": "16 GB RAM",
     "storage": "512 GB SSD",
@@ -36,7 +36,7 @@
     "description": "« Oplev den nyeste generation af iPhone 15, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "9.799",
     "image": "assets/img/iphone15.png",
-
+    "amount": "1",
     "processor": "A17 Bionic chip",
     "memory": "6 GB RAM",
     "storage": "128 GB",
@@ -51,7 +51,7 @@
     "description": "« Oplev den nyeste generation af iPhone 14, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "7.999",
     "image": "assets/img/iphone14.png",
-
+    "amount": "1",
     "processor": "A16 Bionic chip",
     "memory": "6 GB RAM",
     "storage": "128 GB",
@@ -66,7 +66,7 @@
     "description": "« Oplev den nyeste generation af iPad Pro, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "5.999",
     "image": "assets/img/ipadpro.png",
-
+    "amount": "1",
     "processor": "Apple M2 chip",
     "memory": "8 GB RAM",
     "storage": "128 GB",
@@ -81,7 +81,7 @@
     "description": "« Oplev den nyeste generation af iPad Air, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "5.499",
     "image": "assets/img/ipadair.png",
-
+    "amount": "1",
     "processor": "Apple M1 chip",
     "memory": "8 GB RAM",
     "storage": "64 GB",
@@ -96,7 +96,7 @@
     "description": "« Oplev den nyeste generation af Apple Watch Series 9, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "3.599",
     "image": "assets/img/watch9.png",
-
+    "amount": "1",
     "processor": "Apple S9 chip",
     "memory": "1 GB RAM",
     "storage": "32 GB",
@@ -111,7 +111,7 @@
     "description": "« Oplev den nyeste generation af Apple Watch Ultra, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "7.199",
     "image": "assets/img/watchultra.png",
-
+    "amount": "1",
     "processor": "Apple S9 chip",
     "memory": "2 GB RAM",
     "storage": "64 GB",
