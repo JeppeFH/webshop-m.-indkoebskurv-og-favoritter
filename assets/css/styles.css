@@ -37,7 +37,7 @@ h2:first-child {
   border-radius: 18px;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 4px 12px #00000014;
+  box-shadow: 5px 2px 12px grey;
 }
 
 .product div {
@@ -63,6 +63,11 @@ h2:first-child {
   border-radius: 15px;
   display: inline-block;
   padding: 5px 10px;
+}
+
+.buy:hover {
+  background-color: rgb(64, 64, 209);
+  transition: all 250ms ease-in-out;
 }
 
 .buy a {
@@ -91,10 +96,6 @@ h2:first-child {
   100% {
     transform: scale(1.2); /* Grow larger than normal */
   }
-}
-
-.BasketBtn {
-  margin-right: 15px;
 }
 
 .product img {
