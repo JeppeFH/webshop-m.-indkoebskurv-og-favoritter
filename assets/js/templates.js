@@ -41,9 +41,9 @@ export const productPageTmpl = (product) =>
       </div>
 
       <div class=quantity>
-        <figure class="plus">+</figure>
-        <label class="quantity-number">${product.amount}</label>
         <figure class="minus">-</figure>
+        <label class="quantity-number">${product.amount}</label>
+        <figure class="plus">+</figure>
       </div>
 
       <button class="addToBasket" >Tilføj til kurven</button>

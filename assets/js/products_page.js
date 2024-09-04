@@ -1,7 +1,6 @@
 import { fetchProducts } from "./fetch_data.js";
 import { productPageTmpl } from "./templates.js";
 
-// Array med produkter
 let products = await fetchProducts();
 
 export function productsPage() {
@@ -11,15 +10,43 @@ export function productsPage() {
 
   if (productPageContainer) {
     let search = location.search;
-    console.log(search);
-
     let productID = new URLSearchParams(search).get("id");
-    console.log(productID);
 
     const findProduct = products.find((product) => product.id == productID);
 
-    console.log("foundProduct", findProduct);
+    if (findProduct) {
+      productPageContainer.innerHTML = productPageTmpl(findProduct);
+      initializeQuantityControls();
+    }
+  }
 
-    productPageContainer.innerHTML = productPageTmpl(findProduct);
+  function initializeQuantityControls() {
+    // Select quantity controls for the current product page
+    const quantityContainer = document.querySelectorAll(".quantity");
+
+    quantityContainer.forEach((control) => {
+      const quantityNumber = control.querySelector(".quantity-number");
+      const minusBtn = control.querySelector(".minus");
+      const plusBtn = control.querySelector(".plus");
+
+      let quantity = parseInt(quantityNumber.textContent, 10);
+
+      function updateQuantity(newQuantity) {
+        if (newQuantity < 1) {
+          newQuantity = 1;
+        }
+        quantityNumber.textContent = newQuantity;
+      }
+
+      minusBtn.addEventListener("click", () => {
+        quantity -= 1;
+        updateQuantity(quantity);
+      });
+
+      plusBtn.addEventListener("click", () => {
+        quantity += 1;
+        updateQuantity(quantity);
+      });
+    });
   }
 }
