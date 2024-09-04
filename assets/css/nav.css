@@ -11,7 +11,7 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   list-style: none;
   margin: 0 auto;
   align-items: center;
@@ -26,8 +26,6 @@ nav a {
   font-size: 1.3rem;
   font-weight: 500;
   color: rgb(85 85 85);
-  font-family: "Roboto", sans-serif;
-
   text-decoration: none;
 }
 
