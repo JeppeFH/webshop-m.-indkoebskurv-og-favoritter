@@ -56,21 +56,21 @@ h2:first-child {
   font-size: 1.5rem;
 }
 
-.buy {
+.buyBtn {
   margin-left: auto;
   margin-right: 15px;
-  background-color: rgb(78, 78, 255);
+  background-color: #0071e3;
   border-radius: 15px;
   display: inline-block;
   padding: 5px 10px;
 }
 
-.buy:hover {
-  background-color: rgb(64, 64, 209);
+.buyBtn:hover {
+  background-color: #0060c1;
   transition: all 250ms ease-in-out;
 }
 
-.buy a {
+.buyBtn a {
   text-decoration: none;
   color: white;
 }
@@ -82,20 +82,12 @@ h2:first-child {
 }
 
 .favBtn:hover {
-  color: red;
+  color: #0060c1;
   transition: all 250ms ease-in-out;
 }
 
-@keyframes fav-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8); /* Shrink */
-  }
-  100% {
-    transform: scale(1.2); /* Grow larger than normal */
-  }
+nav li img {
+  cursor: pointer;
 }
 
 .product img {
@@ -108,4 +100,20 @@ h2:first-child {
 button {
   background-color: white;
   border: none;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust jump height */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jump-animation {
+  animation: jump 0.5s ease-in-out; /* Adjust duration and easing as needed */
 }

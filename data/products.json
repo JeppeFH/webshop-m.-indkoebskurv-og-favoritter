@@ -3,64 +3,120 @@
     "id": 0,
     "title": "Macbook Air",
     "category": "Computer",
-    "description": "High-quality wireless headphones with noise-canceling technology and up to 20 hours of battery life.",
+    "description": "« Oplev den nyeste generation af Macbook Air, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "8.999",
-    "image": "assets/img/macbookair.jpg"
+    "image": "assets/img/macbookair.png",
+
+    "processor": "Apple M2 chip",
+    "memory": "8 GB RAM",
+    "storage": "256 GB SSD",
+    "display": "13.6-inch Retina Display",
+    "battery_life": "Op til 18 timer",
+    "weight": "1.29 kg"
   },
   {
     "id": 1,
     "title": "Macbook Pro",
     "category": "Computer",
-    "description": "Water-resistant smart watch with health tracking, GPS, and customizable watch faces.",
+    "description": "« Oplev den nyeste generation af Macbook Pro, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "14.999",
-    "image": "assets/img/macbookpro.jpg"
+    "image": "assets/img/macbookpro.png",
+
+    "processor": "Apple M2 Pro chip",
+    "memory": "16 GB RAM",
+    "storage": "512 GB SSD",
+    "display": "16-inch Retina Display",
+    "battery_life": "Op til 21 timer",
+    "weight": "2.1 kg"
   },
   {
     "id": 2,
     "title": "iPhone 15",
     "category": "Phone",
-    "description": "Portable Bluetooth speaker with deep bass, 360-degree sound, and 10-hour playtime.",
+    "description": "« Oplev den nyeste generation af iPhone 15, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "9.799",
-    "image": "assets/img/iphone15.jpg"
+    "image": "assets/img/iphone15.png",
+
+    "processor": "A17 Bionic chip",
+    "memory": "6 GB RAM",
+    "storage": "128 GB",
+    "display": "6.1-inch Super Retina XDR Display",
+    "camera": "48 MP triple kamera system",
+    "battery_life": "Op til 20 timer"
   },
   {
     "id": 3,
     "title": "iPhone 14",
     "category": "Phone",
-    "description": "65-inch 4K Ultra HD Smart TV with HDR support and built-in streaming apps.",
+    "description": "« Oplev den nyeste generation af iPhone 14, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "7.999",
-    "image": "assets/img/iphone14.jpg"
+    "image": "assets/img/iphone14.png",
+
+    "processor": "A16 Bionic chip",
+    "memory": "6 GB RAM",
+    "storage": "128 GB",
+    "display": "6.1-inch Super Retina XDR Display",
+    "camera": "12 MP dual kamera system",
+    "battery_life": "Op til 19 timer"
   },
   {
     "id": 4,
     "title": "iPad Pro",
     "category": "iPad",
-    "description": "Powerful gaming laptop with a 15.6-inch display, Intel i7 processor, and 16GB RAM.",
+    "description": "« Oplev den nyeste generation af iPad Pro, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "5.999",
-    "image": "assets/img/ipadpro.jpg"
+    "image": "assets/img/ipadpro.png",
+
+    "processor": "Apple M2 chip",
+    "memory": "8 GB RAM",
+    "storage": "128 GB",
+    "display": "12.9-inch Liquid Retina Display",
+    "camera": "12 MP rear camera, 12 MP Ultra Wide front camera",
+    "battery_life": "Op til 10 timer"
   },
   {
     "id": 5,
     "title": "iPad Air",
     "category": "iPad",
-    "description": "Latest generation smartphone with a 6.5-inch display, triple-camera system, and 128GB storage.",
+    "description": "« Oplev den nyeste generation af iPad Air, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "5.499",
-    "image": "assets/img/ipadair.jpg"
+    "image": "assets/img/ipadair.png",
+
+    "processor": "Apple M1 chip",
+    "memory": "8 GB RAM",
+    "storage": "64 GB",
+    "display": "10.9-inch Liquid Retina Display",
+    "camera": "12 MP rear camera, 12 MP Ultra Wide front camera",
+    "battery_life": "Op til 10 timer"
   },
   {
     "id": 6,
     "title": "Apple Watch Series 9",
     "category": "Watch",
-    "description": "Rechargeable electric toothbrush with smart sensor technology and multiple brushing modes.",
+    "description": "« Oplev den nyeste generation af Apple Watch Series 9, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "3.599",
-    "image": "assets/img/watch9.jpg"
+    "image": "assets/img/watch9.png",
+
+    "processor": "Apple S9 chip",
+    "memory": "1 GB RAM",
+    "storage": "32 GB",
+    "display": "Always-On Retina Display",
+    "sensors": "Blood Oxygen, ECG, Heart Rate",
+    "battery_life": "Op til 18 timer"
   },
   {
     "id": 7,
     "title": "Apple Watch Ultra 2",
     "category": "Watch",
-    "description": "Sleek fitness tracker with heart rate monitoring, sleep tracking, and step counter.",
+    "description": "« Oplev den nyeste generation af Apple Watch Ultra, designet til at holde dig forbundet og sundere end nogensinde. Med et slankt og elegant design, der kombinerer stil med funktionalitet, er dette ur din perfekte ledsager til hverdagens udfordringer og eventyr. »",
     "price": "7.199",
-    "image": "assets/img/watchultra.jpg"
+    "image": "assets/img/watchultra.png",
+
+    "processor": "Apple S9 chip",
+    "memory": "2 GB RAM",
+    "storage": "64 GB",
+    "display": "Ultra Bright Retina Display",
+    "sensors": "Blood Oxygen, ECG, Heart Rate, Depth Gauge",
+    "battery_life": "Op til 36 timer"
   }
 ]

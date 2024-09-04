@@ -7,14 +7,15 @@ let products = await fetchProducts();
 export function favorites() {
   const favoriteListContainer = document.querySelector(".favorite-container");
 
-  // Parse: Når du henter JSON data udefra, som skal bruges i JavaSpript-koden, skal det først omdannes til JavaScript-objekter - Det sørger 'parse'-funktionen for.
+  // Parse: Når du henter JSON data udefra, som skal bruges i JavaSpript-koden,
+  //skal det først omdannes til JavaScript-objekter - Det sørger 'parse'-funktionen for.
 
   let favorites = JSON.parse(localStorage.getItem("favList")) || [];
 
   function renderFavoriteList() {
     if (favoriteListContainer) {
       if (favorites.length != 0) {
-        favoriteListContainer.innerHTML = ""; // DENNE LINJE MANGLEDE <-------
+        favoriteListContainer.innerHTML = "";
 
         favorites.forEach((product) => {
           favoriteListContainer.insertAdjacentHTML(
@@ -50,6 +51,8 @@ export function favorites() {
       localStorage.setItem("favList", JSON.stringify(favorites));
 
       renderFavoriteList();
+
+      triggerJumpAnimation();
     } else {
       console.log("Produktet er allerede tilføjet til favoritter");
     }
@@ -59,6 +62,14 @@ export function favorites() {
   favBtn.forEach((btn) => {
     btn.addEventListener("click", addToFav);
   });
+
+  // Funktion for hoppe animation
+  function triggerJumpAnimation() {
+    const bookmark = document.querySelector(".bookmark-link");
+    if (bookmark) {
+      bookmark.classList.toggle("jump-animation");
+    }
+  }
 
   function removeFromFav(e) {
     const productIdToRemove = e.target.id;
