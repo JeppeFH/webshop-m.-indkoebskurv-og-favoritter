@@ -41,6 +41,8 @@ export function basket() {
 
       localStorage.setItem("shoppingBasket", JSON.stringify(basket));
 
+      triggerJumpAnimation();
+
       renderbasket();
     } else {
       console.log("Produktet er allerede tilføjet til kurv");
@@ -53,8 +55,17 @@ export function basket() {
     product.addEventListener("click", addToBasket);
   });
 
-  function removeFromBasket(e) {
-    const productIdToRemove = e.target.id;
+  // Funktion for Keyframe animation
+  /*  */
+  function triggerJumpAnimation() {
+    const basketLink = document.querySelector(".basket-link");
+    if (basketLink) {
+      basketLink.classList.toggle("jump-animation");
+    }
+  }
+
+  function removeFromBasket(event) {
+    const productIdToRemove = event.target.id;
     const indexOfBasket = basket.findIndex(
       (product) => product.id == productIdToRemove
     );

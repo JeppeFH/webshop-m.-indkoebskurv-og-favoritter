@@ -63,7 +63,8 @@ export function favorites() {
     btn.addEventListener("click", addToFav);
   });
 
-  // Funktion for hoppe animation
+  // Funktion for Keyframe animation
+  /*  */
   function triggerJumpAnimation() {
     const bookmark = document.querySelector(".bookmark-link");
     if (bookmark) {

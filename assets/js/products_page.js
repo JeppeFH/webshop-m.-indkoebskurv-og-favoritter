@@ -16,12 +16,11 @@ export function productsPage() {
 
     if (findProduct) {
       productPageContainer.innerHTML = productPageTmpl(findProduct);
-      initializeQuantityControls();
+      quantityControls();
     }
   }
 
-  function initializeQuantityControls() {
-    // Select quantity controls for the current product page
+  function quantityControls() {
     const quantityContainer = document.querySelectorAll(".quantity");
 
     quantityContainer.forEach((control) => {

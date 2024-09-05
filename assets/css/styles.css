@@ -102,12 +102,13 @@ button {
   border: none;
 }
 
+/* Keyframe animation */
 @keyframes jump {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Adjust jump height */
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
@@ -115,5 +116,5 @@ button {
 }
 
 .jump-animation {
-  animation: jump 0.5s ease-in-out; /* Adjust duration and easing as needed */
+  animation: jump 500ms ease-in-out;
 }
