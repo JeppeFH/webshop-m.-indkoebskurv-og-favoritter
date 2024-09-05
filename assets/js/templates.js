@@ -50,30 +50,6 @@ export const productPageTmpl = (product) =>
       </div>
   `;
 
-export const basketTmpl = (product) =>
-  `   <div class="baskets">
-        <div class=basket-left>
-        <img src="${product.image}">
-        </div>
-
-        <p>${product.basketInfo}</p>
-        
-        <div class=quantity>
-        <figure class="minus">-</figure>
-        <label class="quantity-number">${product.amount}</label>
-        <figure class="plus">+</figure>
-      
-
-      <div class= "basket-column"
-      <p>${product.price} kr</p>
-      <p>${product.basketRights} kr</p>
-      <button class="removeFromBasket">Fjern</button>
-      </div>
-        
-        
-      </div>
-    `;
-
 export const favListTmpl = (product) =>
   `   
       <div class="favorites">
@@ -88,3 +64,50 @@ export const favListTmpl = (product) =>
       </div>
       </div>
       `;
+
+export const basketTmpl = (product) =>
+  `   <div class="baskets">
+              
+              <img src="${product.image}">
+              
+              <p class="basketInfo">${product.basketInfo}</p>
+              
+              <div class="quantity">
+              <figure class="plus">+</figure>
+              <label class="quantity-number">${product.amount}</label>
+              <figure class="minus">-</figure>
+              </div>
+            
+              <div class= "basket-column">
+              <p class="basketPrice">${product.price} kr</p>
+              <p class="basketRights">${product.basketRights} kr</p>
+              <button class="removeFromBasket">Fjern</button>
+              </div>
+              
+            </div>
+          `;
+
+export const totalPrice = (product) =>
+  `
+          <div class="basketPrice">
+
+          <div class="subTotalPriceContainer">
+            <h3>Subtotal</h3>
+            <p class="subtotal"> ${product.price} kr</p>
+          </div>
+
+            <h3>Forsendelse</h3>
+            <h3>GRATIS</h3>
+
+          <div class="totalPriceContainer">
+              <h3>totalPrice</h3>
+              <p class="totalPrice"> ${product.price} kr</p>
+          </div>
+
+          <button class="GoToPayBtn">Gå til Betaling</button>
+
+          </div>
+          
+          
+          
+          `;

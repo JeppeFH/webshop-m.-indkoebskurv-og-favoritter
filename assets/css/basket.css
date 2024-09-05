@@ -1,28 +1,107 @@
 .basket-container {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(auto, auto);
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 2rem;
 }
 
 .baskets {
   width: 80%;
-  display: flex;
-  border-radius: 18px;
-}
-
-.basket-column {
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  border-top: 1px solid #bfbfc4;
+  padding-top: 30px;
 }
 
 .basket-container img {
   width: 300px;
 }
 
+.basket-column {
+  text-align: end;
+}
+
 .removeFromBasket {
   background-color: transparent;
   font-size: 1.5rem;
   font-weight: 600;
+  cursor: pointer;
+  color: #0071e3;
+  font-size: 1.8rem;
+  letter-spacing: -0.022em;
+  line-height: 1.4705882353;
+}
+
+.removeFromBasket:hover {
+  text-decoration: underline;
+}
+
+.basketInfo,
+.basketPrice {
+  color: #1d1d1f;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  line-height: 1.1666666667;
+}
+
+.basketPrice {
+  margin-bottom: 5px;
+}
+
+.basketRights {
+  color: #6e6e73;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.016em;
+  line-height: 1.4285914286;
+  margin-bottom: 20px;
+}
+
+/* Quantity */
+.quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.quantity figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(229, 229, 229);
+  color: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+.quantity figure:hover {
+  background-color: rgb(208, 208, 208);
+}
+
+.quantity-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  width: 40px;
+  height: 30px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
 }
