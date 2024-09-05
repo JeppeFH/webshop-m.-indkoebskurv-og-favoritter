@@ -1,5 +1,5 @@
 import { fetchProducts } from "./fetch_data.js";
-import { basketTmpl } from "./templates.js";
+import { basketTmpl, totalPrice } from "./templates.js";
 
 let products = await fetchProducts();
 
