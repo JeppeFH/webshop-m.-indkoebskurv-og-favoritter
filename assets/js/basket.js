@@ -30,9 +30,10 @@ export function basket() {
 
   renderbasket();
 
-  function addToBasket() {
-    const productID = e.target.productID;
+  function addToBasket(e) {
+    const productID = e.target.id;
     const productToAdd = products.find((product) => product.id == productID);
+    console.log(productToAdd);
 
     const exist = basket.find((product) => product.id == productToAdd.id);
 
@@ -41,17 +42,16 @@ export function basket() {
 
       localStorage.setItem("shoppingBasket", JSON.stringify(basket));
 
-      triggerJumpAnimation();
-
       renderbasket();
+
+      triggerJumpAnimation();
     } else {
       console.log("Produktet er allerede tilføjet til kurv");
     }
   }
 
-  const buyBtn = document.querySelectorAll(".buyBtn");
-
-  buyBtn.forEach((product) => {
+  const addBasket = document.querySelectorAll(".addToBasket");
+  addBasket.forEach((product) => {
     product.addEventListener("click", addToBasket);
   });
 
@@ -59,25 +59,26 @@ export function basket() {
   /*  */
   function triggerJumpAnimation() {
     const basketLink = document.querySelector(".basket-link");
+
     if (basketLink) {
       basketLink.classList.toggle("jump-animation");
+      void basketLink.offsetWidth;
     }
   }
 
-  function removeFromBasket(event) {
-    const productIdToRemove = event.target.id;
+  function removeFromBasket(e) {
+    const productIdToRemove = e.target.id;
     const indexOfBasket = basket.findIndex(
       (product) => product.id == productIdToRemove
     );
-
     basket.splice(indexOfBasket, 1);
 
     localStorage.setItem("shoppingBasket", JSON.stringify(basket));
 
     renderbasket();
-  }
 
-  if (basket.length == 0) {
-    localStorage.removeItem("shoppingBasket");
+    if (basket.length == 0) {
+      localStorage.removeItem("shoppingBasket");
+    }
   }
 }

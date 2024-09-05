@@ -4,17 +4,17 @@
   grid-template-rows: repeat(auto auto);
   justify-content: center;
   padding: 20px 20px;
-  background-color: white;
   width: 80%;
   height: auto;
   margin: 0 auto;
   border-radius: 18px;
-  box-shadow: 5px 2px 12px grey;
+
+  gap: 40px;
 }
 
 .favorites {
   width: 300px;
-  height: 280px;
+  height: 330px;
   border-radius: 18px;
   background-color: white;
   box-shadow: 5px 2px 12px grey;
@@ -51,4 +51,9 @@
 
 .favorite-container img {
   width: 300px;
+}
+
+h2 {
+  margin-left: 0;
+  margin: 0 auto;
 }

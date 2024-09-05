@@ -1,0 +1,28 @@
+.basket-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.baskets {
+  width: 80%;
+  display: flex;
+  border-radius: 18px;
+}
+
+.basket-column {
+  flex-direction: column;
+}
+
+.basket-container img {
+  width: 300px;
+}
+
+.removeFromBasket {
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

@@ -46,21 +46,32 @@ export const productPageTmpl = (product) =>
         <figure class="plus">+</figure>
       </div>
 
-      <button class="addToBasket" >Tilføj til kurven</button>
+      <button class="addToBasket" id="${product.id}">Tilføj til kurven</button>
       </div>
   `;
 
 export const basketTmpl = (product) =>
-  `
-        <h2>${product.title}</h2>
-        <p><i>Fra ${product.price} kr</i></p>
+  `   <div class="baskets">
+        <div class=basket-left>
         <img src="${product.image}">
-        <p>${product.description}</p>
-        <button class="addToBasket" >Tilføj til kurven</button>
-        <button class="removeFromBasket">Tilføj til kurven</button>
+        </div>
+
+        <p>${product.basketInfo}</p>
+        
+        <div class=quantity>
+        <figure class="minus">-</figure>
+        <label class="quantity-number">${product.amount}</label>
+        <figure class="plus">+</figure>
+      
+
+      <div class= "basket-column"
+      <p>${product.price} kr</p>
+      <p>${product.basketRights} kr</p>
+      <button class="removeFromBasket">Fjern</button>
+      </div>
         
         
-    <br>
+      </div>
     `;
 
 export const favListTmpl = (product) =>

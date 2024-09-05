@@ -39,8 +39,9 @@ export function favorites() {
   renderFavoriteList();
 
   function addToFav(e) {
-    const productID = e.target.id;
+    const productID = e.currentTarget.id;
     const productToAdd = products.find((product) => product.id == productID);
+    console.log(productToAdd);
 
     const exist = favorites.find((product) => product.id == productToAdd.id);
 
@@ -67,8 +68,10 @@ export function favorites() {
   /*  */
   function triggerJumpAnimation() {
     const bookmark = document.querySelector(".bookmark-link");
+
     if (bookmark) {
       bookmark.classList.toggle("jump-animation");
+      void bookmark.offsetWidth;
     }
   }
 
