@@ -25,6 +25,7 @@ export function basket() {
         totalPrice();
       } else {
         basketContainer.innerHTML = "Kurven er tom";
+        totalPriceContainer.remove(); //fjerner ialt-beløb hvis kurv er tom
       }
     }
 
@@ -108,8 +109,8 @@ export function basket() {
         basketPrice[index].textContent = `${amountPrice} kr`;
 
         localStorage.setItem("shoppingBasket", JSON.stringify(basket));
-        renderBasket();
         totalPrice(); // Opdater totalprisen ved ændringer
+        renderBasket();
       });
     });
 
@@ -132,6 +133,7 @@ export function basket() {
         }
 
         localStorage.setItem("shoppingBasket", JSON.stringify(basket));
+        totalPrice();
         renderBasket();
       });
     });
