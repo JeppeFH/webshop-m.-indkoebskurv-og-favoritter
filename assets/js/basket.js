@@ -18,13 +18,11 @@ export function basket() {
           basketContainer.insertAdjacentHTML("beforeend", basketTmpl(product));
         });
 
-        /* antal funktion bliver kaldt */
+        /* Antal-funktion bliver kaldt */
         quantity();
 
-        /* produktkurvspris funktion bliver kaldt */
-        basketProductPrice();
-
-        /* totalpris funktion bliver kaldt  */
+        /* Totalpris-funktion bliver kaldt */
+        totalPrice();
       } else {
         basketContainer.innerHTML = "Kurven er tom";
       }
@@ -111,6 +109,7 @@ export function basket() {
 
         localStorage.setItem("shoppingBasket", JSON.stringify(basket));
         renderBasket();
+        totalPrice(); // Opdater totalprisen ved ændringer
       });
     });
 
@@ -136,5 +135,19 @@ export function basket() {
         renderBasket();
       });
     });
+  }
+
+  /*funktion totalpris */
+  function totalPrice() {
+    // Find pris-elementet i DOM'en
+    let priceElement = document.querySelector(".price");
+
+    // Beregn den samlede pris ved at loope igennem produkterne i kurven
+    let totalPrice = basket.reduce((acc, product) => {
+      return acc + product.amount * product.price;
+    }, 0);
+
+    // Opdater pris-elementet med den samlede pris
+    priceElement.textContent = `${totalPrice} kr`;
   }
 }

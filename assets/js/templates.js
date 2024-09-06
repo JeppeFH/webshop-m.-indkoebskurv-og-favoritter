@@ -86,25 +86,3 @@ export const basketTmpl = (product) =>
               
             </div>
           `;
-
-export const totalPriceTmpl = (product) =>
-  `
-          <div class="basketPrice">
-
-          <div class="subTotalPriceContainer">
-            <h3>Subtotal</h3>
-            <p class="subtotal"> ${product.price} kr</p>
-          </div>
-
-            <h3>Forsendelse</h3>
-            <h3>GRATIS</h3>
-
-          <div class="totalPriceContainer">
-              <h3>totalPrice</h3>
-              <p class="totalPrice"> ${product.price} kr</p>
-          </div>
-
-          <button class="GoToPayBtn">Gå til Betaling</button>
-
-          </div>
-          `;
