@@ -6,8 +6,8 @@ export const productListTmpl = (product) =>
       <img src="${product.image}">
       <div>
       <p>${product.price} kr.</p> 
-      <button class="buyBtn"><a href="page.html?id=${product.id}">Se Produkt</a></button>  
-      <button class="favBtn" id="${product.id}"><i class="fa-regular fa-bookmark"></i></button>
+      <a class="buyBtn" href="page.html?id=${product.id}">Se Produkt</a>
+      <a class="favBtn" id="${product.id}"><i class="fa-regular fa-bookmark"></i></a>
      
   <div>
       </div>

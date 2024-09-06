@@ -113,20 +113,64 @@
 /* Total pris */
 .totalPriceContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto auto);
   justify-items: center;
-  margin-top: 50px;
-  gap: 30px;
-  border-top: 1px solid #bfbfc4;
+  border-top: 2px solid #bfbfc4;
   padding-top: 20px;
   width: 80%;
+  margin: 50px auto 80px auto;
 }
 
-.totalPriceContainer:nth-child(3) {
+.totalPriceContainer h3:nth-child(1),
+.totalPriceContainer h3:nth-child(3) {
+  grid-column-start: 3;
+}
+
+.totalPriceContainer h3:nth-child(1),
+.totalPriceContainer p:nth-child(2) {
   color: #1d1d1f;
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: 0.009em;
   line-height: 1.1666666667;
+}
+.totalPriceContainer h3:nth-child(3),
+.totalPriceContainer p:nth-child(4) {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.4705882353;
+}
+
+.totalPriceContainer h3:nth-child(3) {
+  margin-right: 55px;
+}
+
+.totalPriceContainer p:nth-child(2),
+.totalPriceContainer p:nth-child(4) {
+  justify-self: end;
+}
+
+.goToPayBtn {
+  display: inline-block;
+  font-size: 1.7rem;
+  background-color: #0071e3;
+  border-radius: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 15px 0;
+  width: 60%;
+  line-height: 1.1764805882;
+  grid-column-start: 4;
+  margin-top: 20px;
+  justify-self: end;
+  text-align: center;
+}
+
+.goToPayBtn:hover {
+  background-color: #0060c1;
+  transition: all 250ms ease-in-out;
 }

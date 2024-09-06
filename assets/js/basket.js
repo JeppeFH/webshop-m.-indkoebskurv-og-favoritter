@@ -148,6 +148,6 @@ export function basket() {
     }, 0);
 
     // Opdater pris-elementet med den samlede pris
-    priceElement.textContent = `${totalPrice} kr`;
+    priceElement.textContent = `${totalPrice} kr.`;
   }
 }
