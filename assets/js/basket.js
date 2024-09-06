@@ -1,10 +1,11 @@
 import { fetchProducts } from "./fetch_data.js";
-import { basketTmpl, totalPrice } from "./templates.js";
+import { basketTmpl } from "./templates.js";
 
 let products = await fetchProducts();
 
 export function basket() {
   const basketContainer = document.querySelector(".basket-container");
+  const totalPriceContainer = document.querySelector(".totalPriceContainer");
 
   let basket = JSON.parse(localStorage.getItem("shoppingBasket")) || [];
 
@@ -16,6 +17,14 @@ export function basket() {
         basket.forEach((product) => {
           basketContainer.insertAdjacentHTML("beforeend", basketTmpl(product));
         });
+
+        /* antal funktion bliver kaldt */
+        quantity();
+
+        /* produktkurvspris funktion bliver kaldt */
+        basketProductPrice();
+
+        /* totalpris funktion bliver kaldt  */
       } else {
         basketContainer.innerHTML = "Kurven er tom";
       }
@@ -80,5 +89,52 @@ export function basket() {
     if (basket.length == 0) {
       localStorage.removeItem("shoppingBasket");
     }
+  }
+
+  /* antal (quantity) funktion */
+  function quantity() {
+    const plusBtn = document.querySelectorAll(".plus");
+    const minusBtn = document.querySelectorAll(".minus");
+    const quantityLabel = document.querySelectorAll(".quantity-number");
+    let basketPrice = document.querySelectorAll(".basketPrice");
+
+    plusBtn.forEach((plus, index) => {
+      plus.addEventListener("click", () => {
+        basket[index].amount++; //Plusser antal
+
+        //Opdatere antal-label til det antal man plusser med
+        quantityLabel[index].textContent = basket[index].amount;
+
+        //Opdatere prisen ift. antallet
+        const amountPrice = basket[index].amount * basket[index].price;
+        basketPrice[index].textContent = `${amountPrice} kr`;
+
+        localStorage.setItem("shoppingBasket", JSON.stringify(basket));
+        renderBasket();
+      });
+    });
+
+    minusBtn.forEach((minus, index) => {
+      minus.addEventListener("click", () => {
+        if (basket[index].amount > 1) {
+          basket[index].amount--;
+        } else {
+          // fjerner produkt hvis under 1
+          basket.splice(index, 1);
+        }
+
+        //Opdatere antal-label til det antal man minusser med
+        quantityLabel[index].textContent = basket[index]?.amount || 0;
+
+        //Opdatere prisen ift. antallet
+        if (basket[index]) {
+          const amountPrice = basket[index].amount * basket[index].price;
+          basketPrice[index].textContent = `${amountPrice} kr`;
+        }
+
+        localStorage.setItem("shoppingBasket", JSON.stringify(basket));
+        renderBasket();
+      });
+    });
   }
 }

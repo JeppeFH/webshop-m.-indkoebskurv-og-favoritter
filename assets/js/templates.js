@@ -87,7 +87,7 @@ export const basketTmpl = (product) =>
             </div>
           `;
 
-export const totalPrice = (product) =>
+export const totalPriceTmpl = (product) =>
   `
           <div class="basketPrice">
 
@@ -107,7 +107,4 @@ export const totalPrice = (product) =>
           <button class="GoToPayBtn">Gå til Betaling</button>
 
           </div>
-          
-          
-          
           `;

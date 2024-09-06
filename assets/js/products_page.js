@@ -23,10 +23,10 @@ export function productsPage() {
   function quantityControls() {
     const quantityContainer = document.querySelectorAll(".quantity");
 
-    quantityContainer.forEach((control) => {
-      const quantityNumber = control.querySelector(".quantity-number");
-      const minusBtn = control.querySelector(".minus");
-      const plusBtn = control.querySelector(".plus");
+    quantityContainer.forEach((e) => {
+      const quantityNumber = e.querySelector(".quantity-number");
+      const minusBtn = e.querySelector(".minus");
+      const plusBtn = e.querySelector(".plus");
 
       let quantity = parseInt(quantityNumber.textContent, 10);
 
