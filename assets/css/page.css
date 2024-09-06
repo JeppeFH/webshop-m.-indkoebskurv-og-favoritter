@@ -147,10 +147,54 @@ nav {
 
 /* Basket popup */
 .basketPopup {
-  background-color: #0060c1;
+  background-color: #0071e3;
   display: none;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+  transition: transform 300ms ease;
+  text-align: center;
+  width: 50%;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.basketPopup p {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.basketPopup p span {
+  font-weight: 300;
 }
 
 .basketPopup.active {
   display: block;
+  animation: popupSlideIn 500ms forwards;
+}
+
+@keyframes popupSlideIn {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.basketPopup a {
+  padding: 5px 0;
+  cursor: pointer;
+  background-color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.basketPopup a:hover {
+  background-color: rgb(233, 233, 233);
+  transition: all 250ms ease-in-out;
 }
