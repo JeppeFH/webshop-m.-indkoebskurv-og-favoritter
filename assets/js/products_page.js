@@ -17,6 +17,7 @@ export function productsPage() {
     if (findProduct) {
       productPageContainer.innerHTML = productPageTmpl(findProduct);
       quantityControls();
+      popup();
     }
   }
 
@@ -45,6 +46,25 @@ export function productsPage() {
       plusBtn.addEventListener("click", () => {
         quantity += 1;
         updateQuantity(quantity);
+      });
+    });
+  }
+
+  /* Basket popup */
+  function popup() {
+    const addToBasketButtons = document.querySelectorAll(".addToBasket");
+
+    addToBasketButtons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const productPopup = btn.parentElement.querySelector(".basketPopup");
+
+        // Show the popup for the clicked product
+        productPopup.classList.add("active");
+
+        // Optional: Automatically hide the popup after a few seconds
+        setTimeout(() => {
+          productPopup.classList.remove("active");
+        }, 3000); // 3 seconds delay (or set your preferred delay)
       });
     });
   }

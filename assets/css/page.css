@@ -144,3 +144,13 @@ nav {
   line-height: 30px;
   margin: 0 5px;
 }
+
+/* Basket popup */
+.basketPopup {
+  background-color: #0060c1;
+  display: none;
+}
+
+.basketPopup.active {
+  display: block;
+}
