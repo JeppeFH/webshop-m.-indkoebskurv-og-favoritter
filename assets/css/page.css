@@ -74,8 +74,8 @@ nav {
 }
 
 .colorway {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   padding: 5px;
   display: inline-block;
@@ -101,6 +101,17 @@ nav {
 
 .gradient-5 {
   background: linear-gradient(to right, #fbc2eb, #a6c0fe);
+}
+
+.colorway:hover {
+  border: 2px solid black;
+}
+
+.colorMessageWarning {
+  font-size: 1.4rem;
+  color: red;
+  margin: 10px 0;
+  display: none;
 }
 
 /* Quantity */
@@ -148,15 +159,18 @@ nav {
 /* Basket popup */
 .basketPopup {
   background-color: #0071e3;
-  display: none;
   display: flex;
   flex-direction: column;
-  padding: 15px 10px;
-  transition: transform 300ms ease;
+  padding: 15px 10px 10px 10px;
+  transition: transform 1000ms ease;
   text-align: center;
-  width: 50%;
-  gap: 10px;
   border-radius: 5px;
+  gap: 10px;
+  position: relative;
+  opacity: 0;
+  width: 262px;
+  left: 372px;
+  top: 40px;
 }
 
 .basketPopup p {
@@ -170,13 +184,13 @@ nav {
 }
 
 .basketPopup.active {
-  display: block;
-  animation: popupSlideIn 500ms forwards;
+  opacity: 1;
+  animation: popupSlideIn 800ms forwards;
 }
 
 @keyframes popupSlideIn {
   0% {
-    right: -100%;
+    left: -50%;
     opacity: 0;
   }
   100% {
@@ -192,9 +206,26 @@ nav {
   display: inline-block;
   font-size: 1.3rem;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .basketPopup a:hover {
   background-color: rgb(233, 233, 233);
   transition: all 250ms ease-in-out;
+}
+
+/* Progress bar */
+.progressBar {
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressPer {
+  background-color: black;
+  height: 100%;
+  width: 0%;
+  transition: width 8s linear;
 }

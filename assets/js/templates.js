@@ -31,27 +31,33 @@ export const productPageTmpl = (product) =>
       <p>Batteritid: ${product.battery_life}</p>
       </div>
 
+      <div class="colorMessageWarning">Vælg en farve</div>
       
       <div class="colorways">
-        <figure class="colorway gradient-1"></figure>
-        <figure class="colorway gradient-2"></figure>
-        <figure class="colorway gradient-3"></figure>
-        <figure class="colorway gradient-4"></figure>
-        <figure class="colorway gradient-5"></figure>
+      <figure class="colorway gradient-1"></figure>
+      <figure class="colorway gradient-2"></figure>
+      <figure class="colorway gradient-3"></figure>
+      <figure class="colorway gradient-4"></figure>
+      <figure class="colorway gradient-5"></figure>
       </div>
-
+      
       <div class=quantity>
-        <figure class="minus">-</figure>
-        <label class="quantity-number">${product.amount}</label>
-        <figure class="plus">+</figure>
+      <figure class="minus">-</figure>
+      <label class="quantity-number">${product.amount}</label>
+      <figure class="plus">+</figure>
       </div>
-
+      
       <button class="addToBasket" id="${product.id}">Tilføj til kurven</button>
       
       <div class="basketPopup">
       <p><span>Du har tilføjet </span>${product.title}<span> til din kurv</span></p>
       <a class="GoToBasket" href="basket.html">Gå til kurven</a>
       <a class="continueShopping" href="index.html">Forsæt med at shoppe</a>
+      
+      <div class="progressBar">
+      <div class="progressPer"></div>
+      </div>
+      
       </div>
 
       </div>

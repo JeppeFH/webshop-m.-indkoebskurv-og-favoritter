@@ -18,6 +18,7 @@ export function productsPage() {
       productPageContainer.innerHTML = productPageTmpl(findProduct);
       quantityControls();
       popup();
+      ChoseColorway();
     }
   }
 
@@ -54,18 +55,71 @@ export function productsPage() {
   function popup() {
     const addToBasketButtons = document.querySelectorAll(".addToBasket");
 
-    addToBasketButtons.forEach((btn, index) => {
+    addToBasketButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         const productPopup = btn.parentElement.querySelector(".basketPopup");
+        const progressBar = productPopup.querySelector(".progressPer");
 
-        // aktive class bliver aktiveret
+        // først fjerner transition fra css og sætter width til 0 for at reset loaderen når der klikkes igen
+        progressBar.style.transition = "none";
+        progressBar.style.width = "0%";
+
+        void progressBar.offsetWidth;
+
+        // timer der animere loaderen
+        setTimeout(() => {
+          progressBar.style.transition = "width 8s linear"; // tilbagetilføjer transition css
+          progressBar.style.width = "100%";
+        }, 100);
+
+        // aktivere popup container
         productPopup.classList.add("active");
 
-        // Sætter timer hvor popup forsvinder igen
+        // fjerner popup efter tidsbestemmelse
         setTimeout(() => {
           productPopup.classList.remove("active");
-        }, 7000);
+        }, 8000);
       });
     });
   }
+
+  function ChoseColorway() {
+    const colorways = document.querySelectorAll(".colorway");
+    const addBasket = document.querySelector(".addToBasket");
+    const messageContainer = document.querySelector(".colorMessageWarning");
+
+    let colorSelected = false;
+
+    // Initially hide the message
+    messageContainer.style.display = "none";
+
+    colorways.forEach((color) => {
+      color.addEventListener("click", () => {
+        // Remove border from all colors
+        colorways.forEach((e) => {
+          e.style.border = "none";
+        });
+
+        // Add border to the clicked color
+        color.style.border = "2px solid black";
+        colorSelected = true;
+
+        // Hide the message when a color is selected
+        messageContainer.style.display = "none";
+      });
+    });
+
+    addBasket.addEventListener("click", () => {
+      if (!colorSelected) {
+        messageContainer.textContent = "Vælg en farve"; // Show message if no color is selected
+        messageContainer.style.display = "block";
+      } else {
+        // Proceed with adding the product to the basket
+        // Your existing add to basket logic here
+      }
+    });
+  }
+
+  // Call the function when the document is ready
+  document.addEventListener("DOMContentLoaded", ChoseColorway);
 }
