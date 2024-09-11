@@ -119,7 +119,7 @@ export function productsPage() {
       /* Hvis ingen farve er valgt ved klik på tilføj til kurv 
       vis container der siger "vælg en farve", ellers gør ingenting */
       if (!colorSelected) {
-        messageContainer.textContent = "Vælg en farve"; //
+        messageContainer.textContent = "Vælg en farve";
         messageContainer.style.display = "block";
       } else {
       }
