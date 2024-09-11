@@ -21,14 +21,6 @@ nav {
   width: 650px;
 }
 
-.addToBasket {
-  cursor: pointer;
-}
-
-.addToBasket.disabled {
-  pointer-events: none;
-}
-
 .product-page-container h3 {
   font-size: 4.8rem;
 }
@@ -55,7 +47,8 @@ nav {
   font-size: 1.4rem;
 }
 
-.addToBasket {
+.addToBasket,
+.addToBasketChoseColor {
   display: inline-block;
   background-color: #0071e3;
   border-radius: 18px;
@@ -63,9 +56,23 @@ nav {
   padding: 7px;
   width: 100%;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.addToBasket:hover {
+.addToBasket {
+  display: none;
+}
+
+.addToBasket.active {
+  display: block;
+}
+
+.addToBasketChoseColor.disabled {
+  display: none;
+}
+
+.addToBasket:hover,
+.addToBasketChoseColor:hover {
   background-color: #0060c1;
   transition: all 250ms ease-in-out;
 }

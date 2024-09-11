@@ -48,7 +48,8 @@ export const productPageTmpl = (product) =>
       </div>
       
       <button class="addToBasket" id="${product.id}">Tilføj til kurven</button>
-      
+      <button class="addToBasketChoseColor">Tilføj til kurven</button>
+
       <div class="basketPopup">
       <p><span>Du har tilføjet </span>${product.title}<span> til din kurv</span></p>
       <a class="GoToBasket" href="basket.html">Gå til kurven</a>

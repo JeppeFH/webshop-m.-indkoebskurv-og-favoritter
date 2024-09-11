@@ -86,6 +86,9 @@ export function productsPage() {
   function ChoseColorway() {
     const colorways = document.querySelectorAll(".colorway");
     const addBasket = document.querySelector(".addToBasket");
+    const addbasketChoseColor = document.querySelector(
+      ".addToBasketChoseColor"
+    );
     const messageContainer = document.querySelector(".colorMessageWarning");
 
     let colorSelected = false;
@@ -106,7 +109,8 @@ export function productsPage() {
         colorSelected = true;
 
         if ((colorSelected = true)) {
-          addBasket.classList.remove("disabled");
+          addBasket.classList.add("active");
+          addbasketChoseColor.classList.add("disabled");
         } else {
         }
 
@@ -115,8 +119,8 @@ export function productsPage() {
       });
     });
 
-    addBasket.addEventListener("click", () => {
-      /* Hvis ingen farve er valgt ved klik på tilføj til kurv 
+    addbasketChoseColor.addEventListener("click", () => {
+      /* Hvis ingen farve er valgt ved klik på tilføj til kurv  
       vis container der siger "vælg en farve", ellers gør ingenting */
       if (!colorSelected) {
         messageContainer.textContent = "Vælg en farve";
