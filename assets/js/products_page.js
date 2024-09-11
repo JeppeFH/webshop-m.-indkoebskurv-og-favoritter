@@ -90,36 +90,39 @@ export function productsPage() {
 
     let colorSelected = false;
 
-    // Initially hide the message
+    /* message container er som udgangspunkt "usynlig" */
     messageContainer.style.display = "none";
+    addBasket.classList.add("disabled");
 
     colorways.forEach((color) => {
       color.addEventListener("click", () => {
-        // Remove border from all colors
+        /* Fjerner border fra alle farver */
         colorways.forEach((e) => {
           e.style.border = "none";
         });
 
-        // Add border to the clicked color
+        /* Tilføjer border, til den der klikkes på */
         color.style.border = "2px solid black";
         colorSelected = true;
 
-        // Hide the message when a color is selected
+        if ((colorSelected = true)) {
+          addBasket.classList.remove("disabled");
+        } else {
+        }
+
+        /* Message container forbliver "usynlig", da en farve er valgt */
         messageContainer.style.display = "none";
       });
     });
 
     addBasket.addEventListener("click", () => {
+      /* Hvis ingen farve er valgt ved klik på tilføj til kurv 
+      vis container der siger "vælg en farve", ellers gør ingenting */
       if (!colorSelected) {
-        messageContainer.textContent = "Vælg en farve"; // Show message if no color is selected
+        messageContainer.textContent = "Vælg en farve"; //
         messageContainer.style.display = "block";
       } else {
-        // Proceed with adding the product to the basket
-        // Your existing add to basket logic here
       }
     });
   }
-
-  // Call the function when the document is ready
-  document.addEventListener("DOMContentLoaded", ChoseColorway);
 }
